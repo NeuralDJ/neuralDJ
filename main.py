@@ -6,9 +6,6 @@ frames = feed.getCameraFrames(5)
 
 encodedFrames = feed.encodeFrames(frames)
 
-faces = []
-for imag in encodedFrames:
-  face = emotion.detect_faces(img=imag.tostring())
-  faces.append(face)
+emotionOutput = emotion.detect_emotion(encodedFrames)
 
-print(faces)
+print(emotionOutput)

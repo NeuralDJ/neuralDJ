@@ -9,3 +9,10 @@ def detect_faces(img, attributes=['ALL'], region="us-east-1"):
 	    Attributes=attributes,
 	)
 	return response['FaceDetails']
+
+def detect_emotion(encodedFrames):
+	faces = []
+	for imag in encodedFrames:
+	  face = detect_faces(img=imag.tostring())
+	  faces.append(face)
+	return faces
