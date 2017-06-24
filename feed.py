@@ -13,6 +13,7 @@ def getCameraFrames(frameCount):
 
    while(frameCount > 0):
      ret, frame = cap.read()
+     cv2.imshow('frame',frame)
 
      if(ret):
        frameList.append(frame)

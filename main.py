@@ -10,6 +10,5 @@ faces = []
 for imag in encodedFrames:
   face = emotion.detect_faces(img=imag.tostring())
   faces.append(face)
-  faces = emotion.detect_faces(imag)
 
 print(faces)
