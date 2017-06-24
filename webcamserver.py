@@ -8,7 +8,7 @@ from PIL import Image
 def read_frame(cap):
     # Capture frame-by-frame
    ret, frame = cap.read()
-   cv2.imshow('frame',frame)
+   #cv2.imshow('frame',frame)
    return frame
 
 # When everything done, release the capture
@@ -28,8 +28,9 @@ if __name__ == "__main__":
 	ct = 0
 	faces = []
 
+	cap = cv2.VideoCapture(0)
+	
 	while(ct < 5):
-	 cap = cv2.VideoCapture(0)
 	 img = read_frame(cap)
 	 jpgencode = cv2.imencode('.jpg',img)
 	 ImageList.append(jpgencode)
