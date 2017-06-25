@@ -44,6 +44,9 @@
 				</div>
 			</section>
 
+			<h1> </h1>
+			<h1> </h1>
+
 		<div class="container">
       		<div id="login">
       		</div>
@@ -55,41 +58,80 @@
         	<div id="track">
 
 
+						<div id="app_controller">
+							<div>
+							
+								<input id="playBtn" type="button" value="PLAY" />
+							
+								<input id="pauseBtn" type="button" value="PAUSE" />
+							
+								<input id="nextBtn" type="button" value="NEXT" />
+							
+								<input id="analyzeRoomBtn" type="button" value="ANALYZE ROOM" />
+							
+							</div>
+						
+							<br />
+						
+							<div> 
+							
+								<p>Title: <span id="cTitle"></span></p>
+							
+								<p>Artist: <span id="cArtist"></span></p>
+							
+								<p>Album: <span id="cAlbum"></span></p>
+							
+								<!--<p>Genre: <span id="cGenre"></span></p>-->
+							
+							</div>
+						
+						
+						
+							<div>
+							
+								<input id="updateSong" type="button" value="Update Track Info" style="display:none" />
+							
+							</div>
+						</div>
 
-					<div>
-
-						<input id="playBtn" type="button" value="PLAY" />
-
-						<input id="pauseBtn" type="button" value="PAUSE" />
-
-						<input id="nextBtn" type="button" value="NEXT" />
-
-						<input id="analyzeRoomBtn" type="button" value="ANALYZE ROOM" />
-
-					</div>
-
-					<br />
-
-					<div> 
-
-						<p>Title: <span id="cTitle"></span></p>
-
-						<p>Artist: <span id="cArtist"></span></p>
-
-						<p>Album: <span id="cAlbum"></span></p>
-
-						<!--<p>Genre: <span id="cGenre"></span></p>-->
-
-					</div>
-
-
-
-					<div>
-
-						<input id="updateSong" type="button" value="Update Track Info" style="display:none" />
-
-					</div>
-
+						<div id="app_data_container" class="appDataContainer">
+							<div id="container_room" class="dataContainer">
+								<div id="loading" class="dataContent">
+										<div id="picture" class="dataPicture">
+												show loading image here
+										</div>
+										<div id="info" class="dataInfo">
+											show loading text here
+										</div>
+								</div>
+								<div id="content" class="dataContent">
+										<div id="picture" class="dataPicture">
+											show room image (any big icon that represents a room)
+										</div>
+										<div id="info" class="dataInfo">
+												show data content retrieved from backend
+										</div>
+								</div>
+							</div>
+							<div id="container_emotion" class="dataContainer">
+								<div id="loading" class="dataContent">
+										<div id="picture" class="dataPicture">
+												show loading image here
+										</div>
+										<div id="info" class="dataInfo">
+											show loading text here
+										</div>
+								</div>
+								<div id="content" class="dataContent">
+										<div id="picture" class="dataPicture">
+											show room image (any big icon that represents a room)
+										</div>
+										<div id="info" class="dataInfo">
+												show data content retrieved from backend
+										</div>
+								</div>
+							</div>
+						</div>
 				</div>
       </div>
     </div>
