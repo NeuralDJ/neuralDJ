@@ -69,7 +69,11 @@ var DeeJay = (function(_access_token) {
             var root = '#container_room > #content > #info > '; 
             $(root + '#age > span').text(data['age']);
             $(root + '#gender > span').text(data['gender']);
-            $(root + '#scene > span').text(data['scene'].join(", "));
+
+            if(data['scene'])
+            {
+              $(root + '#scene > span').text(data['scene'].join(", "));
+            }
 
             // hide content
             $('#container_room > #loading').hide();
