@@ -2,6 +2,8 @@ $( document ).ready(function() {
 
     $('#updateSong').click(function() {
         console.log('#someButton was clicked');
+
+        console.log(getNextGenre());
 	    $('#csong').text("TEST");
     });
 
@@ -22,4 +24,21 @@ $( document ).ready(function() {
         });
     }
 
+    function getNextGenre()
+    {
+        makeCall('http://127.0.0.1:5002/api/genre/next/current_genre_is_rock').done(function(data) {
+
+            console.log("next genre: ");
+            console.log(data);
+            return 'classical';
+        });
+    }
+
+    function makeCall(url, data)
+    {
+        return $.ajax({
+          url: url,
+          data: data
+        })
+    }
 });
