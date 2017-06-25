@@ -14,7 +14,6 @@ cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 class Room_Emotion(Resource):
 	def get(self, r_type, current_genre):
-		print('requesting recognition: ' + r_type)
 		decision = decisionmaker.getDecisionForSongChange(r_type)
 		return jsonify(decision)
         

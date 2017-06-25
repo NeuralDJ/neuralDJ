@@ -51,6 +51,16 @@ var DeeJay = (function(_access_token) {
         });
       }
 
+      self.setRoomSettings = function()
+      {
+          console.log('set room info');
+      }
+
+      self.setEmotions = function()
+      {
+          console.log('set emotion info');
+      }
+
       self.setCurrentTrack = function(delay)
       {
           if(delay === undefined || delay == null || delay < 0)

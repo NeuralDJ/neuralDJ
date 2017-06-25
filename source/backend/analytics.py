@@ -1,4 +1,5 @@
 import statistics
+from sets import Set
 
 def getFeaturesforMusic(FramesList):
 	MusicFeatures = []
@@ -18,7 +19,6 @@ def getFeaturesforMusic(FramesList):
 				emotion.append(Faces['Emotions'][0]['Type'])
 
 	EmotionFeatures = {}
-
 	EmotionFeatures['age'] = 27
 	EmotionFeatures['gender'] = 'male'
 	EmotionFeatures['smile'] = 'yes'
@@ -50,4 +50,10 @@ def getFeaturesforMusic(FramesList):
 
 	return EmotionFeatures
 
+def getVisionforMusic(VisionFeaturesList):
+	visionFeatures = set()
+	for features in VisionFeaturesList:
+		visionFeatures.update(features)
+	visionFeatures = [str(x) for x in visionFeatures]
+	return visionFeatures
 
