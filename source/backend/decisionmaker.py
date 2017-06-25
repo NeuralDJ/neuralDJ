@@ -8,6 +8,8 @@ def getDecisionForSongChange(calltyp = 'emotion'):
 	#keys of dic - age,smile,gender,emotion
 	decision = {}
 
+	print(emotionFeatures)
+
 	if calltyp == 'features':
 		if emotionFeatures['age']:
 			age = emotionFeatures['age']

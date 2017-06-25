@@ -91,6 +91,17 @@ $( document ).ready(function() {
       dj.changeGenre();
     });
 
+    $('#updateSong').click(function() {
+      console.log('getting current song');
+      dj.getCurrentSong().then(function(data) {
+          console.log(data.item.artists);
+          $('#cTitle').text(data.item.name);
+          $('#cArtist').text(data.item.artists[0].name);
+          $('#cAlbum').text(data.item.album.name);
+          //$('#cGenre').text('');
+      })
+    })
+
     // var device_id = undefined;
 
     // // https://jmperezperez.com/spotify-web-api-js/

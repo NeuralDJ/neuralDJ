@@ -42,6 +42,11 @@ var DeeJay = (function(_access_token) {
         });
       }
 
+      self.getCurrentSong = function()
+      {
+          return self.spotify.getMyCurrentPlaybackState();
+      }
+
       return self;
   });
 

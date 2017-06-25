@@ -18,6 +18,12 @@ def getFeaturesforMusic(FramesList):
 				emotion.append(Faces['Emotions'][0]['Type'])
 
 	EmotionFeatures = {}
+
+	EmotionFeatures['age'] = 27
+	EmotionFeatures['gender'] = 'male'
+	EmotionFeatures['smile'] = 'yes'
+	EmotionFeatures['emotion'] = 'SAD'
+
 	if age:
 		try:
     			EmotionFeatures['age'] = statistics.mode(age)

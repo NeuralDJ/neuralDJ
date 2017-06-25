@@ -8,5 +8,10 @@ def GetEmotionFromCameraFeed(fps) :
 	encodedFrames = feed.encodeFrames(frames)
 	emotionOutput = emotion.detect_emotion(encodedFrames)
 	emotionFeatures = analytics.getFeaturesforMusic(emotionOutput)
+
+	print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+	print(emotionFeatures)
+	print('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+	
 	return emotionFeatures
 
