@@ -88,9 +88,15 @@ $( document ).ready(function() {
     });
 
     $('#analyzeRoomBtn').click(function() {
-      //console.log('analyze room');
-      dj.changeGenre();
+      console.log('BOOOM 1');
+      dj.setRoomSettings();
     });
+
+    $('#analyzeAudienceBtn').click(function() {
+      console.log('BOOOOOOOOOM');
+      dj.setEmotions();
+    });
+    //
 
     $('#updateSong').click(function() {
       //console.log('getting current song');
