@@ -1,3 +1,6 @@
+# make sure you have the following packages
+# pip install flask flask-jsonpify flask-sqlalchemy flask-restful
+
 from flask import Flask, request
 from flask_restful import Resource, Api
 from json import dumps
