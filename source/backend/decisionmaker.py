@@ -3,12 +3,10 @@ webcamtoemotion = __import__('webcamtoemotion')
 def getDecisionForSongChange(calltyp = 'emotion'):
 	numofframes = 5
 
-	emotionFeatures = webcamtoemotion.GetEmotionFromCameraFeed(numofframes)
+	emotionFeatures,visionFeatures = webcamtoemotion.GetEmotionFromCameraFeed(numofframes)
 	#emotionFeatues(dic) has the mode of the features of the faces(numofframes*numoffacesineachframe)
 	#keys of dic - age,smile,gender,emotion
 	decision = {}
-
-	print(emotionFeatures)
 
 	if calltyp == 'features':
 		if emotionFeatures['age']:
@@ -21,13 +19,15 @@ def getDecisionForSongChange(calltyp = 'emotion'):
 				decision['age'] = 'old'
 		if emotionFeatures['gender']:
 			decision['gender'] = emotionFeatures['gender']
+		if visionFeatures:
+			decision['scene'] = visionFeatures
 	else:
 		if emotionFeatures['emotion']:
 			emotion = emotionFeatures['emotion']
+			decision['emotion'] = emotion
 			if emotion == 'HAPPY' or emotion == 'UNKNOWN':
 				decision['changeSong'] = 'no'
 			else:
 				decision['changeSong'] = 'yes'
-
 	return decision
 
