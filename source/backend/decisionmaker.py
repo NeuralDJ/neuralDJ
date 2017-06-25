@@ -29,4 +29,3 @@ def getDecisionForSongChange(calltyp = 'emotion'):
 
 	return decision
 
-print(getDecisionForSongChange('emotion'))

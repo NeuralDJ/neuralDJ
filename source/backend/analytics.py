@@ -21,25 +21,25 @@ def getFeaturesforMusic(FramesList):
 	if age:
 		try:
     			EmotionFeatures['age'] = statistics.mode(age)
-		except StatisticsError:
+		except statistics.StatisticsError:
     			EmotionFeatures['age'] = age[0]
 
 	if smile:
 		try:
 			EmotionFeatures['smile'] = statistics.mode(smile)
-		except StatisticsError:
+		except statistics.StatisticsError:
 			EmotionFeatures['smile'] = smile[0]
 
 	if gender:
 		try:
 			EmotionFeatures['gender'] = statistics.mode(gender)
-		except StatisticsError:
+		except statistics.StatisticsError:
 			EmotionFeatures['gender'] = gender[0]
 
 	if emotion:
 		try:
 			EmotionFeatures['emotion'] = statistics.mode(emotion)
-		except StatisticsError:
+		except statistics.StatisticsError:
 			EmotionFeatures['emotion'] = emotion[0]
 
 	return EmotionFeatures
