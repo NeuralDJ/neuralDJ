@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>NEURAL DJ</title>
+		<title>Neural DJ</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -19,41 +19,43 @@
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
-			<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 		</noscript>
 
 	</head>
-	<body id="top">
+	<body>
 
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
 				<h1><a href="#">Neural DJ</a></h1>
 				<nav id="nav">
 					<ul>
-						<li id="login" style="display: inline;"><a href="/login" class="button special">Log in</a></li>
-
-						<li id="loggedin"  style="display: none;"><a href="#" class="button special">Log Out</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Team</a></li>
+						<li id="login"><a href="/login" class="button special">Get Started</a></li>
 					</ul>
 				</nav>
 			</header>
 
+
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<div class="container">
-					<div id="login">
-						<h2>WE ARE NEURAL DJ</h2>
-						<p>The music you want, when you want it.</p>
-						<ul class="actions">
-							<li><a href="/login" class="button big special">Log in</a></li>
-						</ul>
-					</div>
-				 	<div id="loggedin">
-        				<div id="user-profile"></div>
-        			</div>
-        		</div>
-        		</div>
+					<h2>WE ARE NEURAL DJ</h2>
+					<p>The music you want, when you want it.</p>
+				</div>
 			</section>
+
+
+		<div class="container">
+      		<div id="login">
+      		</div>
+      	<div id="loggedin">
+        <div id="user-profile">
+        	</div>
+        <div id="oauth">
+        	</div>
+      </div>
+    </div>
 
 		<!-- One -->
 			<section id="one" class="wrapper style1">
@@ -63,25 +65,32 @@
 				</header>
 				<div class="container">
 					<div class="row">
-						<div class="4u">
+						<div class="3u">
 							<section class="special box">
-								<i class="icon fa-area-chart major"></i>
-								<h3>Justo placerat</h3>
-								<p>Eu non col commodo accumsan ante mi. Commodo consectetur sed mi adipiscing accumsan ac nunc tincidunt lobortis.</p>
+								<i class="icon fa-video-camera major"></i>
+								<h3>Video Input</h3>
+								<p>The video stream processes 5 frames, detects the faces, and then determines their emotion based on their smile.</p>
 							</section>
 						</div>
-						<div class="4u">
+						<div class="3u">
 							<section class="special box">
-								<i class="icon fa-refresh major"></i>
-								<h3>Blandit quis curae</h3>
-								<p>Eu non col commodo accumsan ante mi. Commodo consectetur sed mi adipiscing accumsan ac nunc tincidunt lobortis.</p>
+								<i class="icon fa-music major"></i>
+								<h3>Getting Started</h3>
+								<p>Age and gender determine the starting song, then the emotion either changes or keeps the genre. </p>
 							</section>
 						</div>
-						<div class="4u">
+						<div class="3u">
 							<section class="special box">
-								<i class="icon fa-cog major"></i>
-								<h3>Amet sed accumsan</h3>
-								<p>Eu non col commodo accumsan ante mi. Commodo consectetur sed mi adipiscing accumsan ac nunc tincidunt lobortis.</p>
+								<i class="icon fa-heart major"></i>
+								<h3>Emotion Driven</h3>
+								<p>The emotions are sent to Spotify, where the song will change depending on the mode of the emotions.</p>
+							</section>
+						</div>
+						<div class="3u">
+							<section class="special box">
+								<i class="icon fa-cogs major"></i>
+								<h3>Intelligent Selection</h3>
+								<p>The emotions are sent to Spotify, where the song will change depending on the mode of the emotions.</p>
 							</section>
 						</div>
 					</div>
@@ -166,7 +175,9 @@
     </script>
 
     <script id="user-profile-template" type="text/x-handlebars-template">
-      <h1>Logged in as {{display_name}}</h1>
+      <h1> </h1>
+      <h1> </h1>
+      <h1>DJ Neuro featuring {{display_name}}</h1>
       <div class="media">
         <div class="pull-left">
           <img class="media-object" width="150" src="{{images.0.url}}" />
@@ -174,11 +185,6 @@
         <div class="media-body">
           <dl class="dl-horizontal">
             <dt>Display name</dt><dd class="clearfix">{{display_name}}</dd>
-            <dt>Id</dt><dd>{{id}}</dd>
-            <dt>Email</dt><dd>{{email}}</dd>
-            <dt>Spotify URI</dt><dd><a href="{{external_urls.spotify}}">{{external_urls.spotify}}</a></dd>
-            <dt>Link</dt><dd><a href="{{href}}">{{href}}</a></dd>
-            <dt>Profile Image</dt><dd class="clearfix"><a href="{{images.0.url}}">{{images.0.url}}</a></dd>
             <dt>Country</dt><dd>{{country}}</dd>
           </dl>
         </div>
