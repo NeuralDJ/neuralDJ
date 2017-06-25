@@ -24,7 +24,9 @@ var DeeJay = (function(_access_token) {
 
       self.skipSong = function()
       {
-        self.spotify.skipToNext({ device_id: self.device_id });
+        self.spotify.skipToNext({ device_id: self.device_id }).then(function(data) {
+            self.setCurrentTrack(500);
+        });
       }
 
       self.changeGenre = function(current_genre)
@@ -42,11 +44,30 @@ var DeeJay = (function(_access_token) {
         });
       }
 
-      self.getCurrentSong = function()
+      self.setCurrentTrack = function(delay)
       {
-          return self.spotify.getMyCurrentPlaybackState();
-      }
+          if(delay === undefined || delay == null || delay < 0)
+          {
+              delay = 10
+          }
 
+          setTimeout(function() {
+            console.log('lets change songs!');
+            var callback = self.spotify.getMyCurrentPlaybackState();
+            callback.then(function(data) {
+                console.log(data.item.artists);
+                $('#cTitle').text(data.item.name);
+                $('#cArtist').text(data.item.artists[0].name);
+                $('#cAlbum').text(data.item.album.name);
+            });
+          }, delay);
+
+          
+          //$('#cGenre').text('');
+
+          //return callback;
+      };
+    
       return self;
   });
 
