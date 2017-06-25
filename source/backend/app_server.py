@@ -6,20 +6,31 @@ from flask_restful import Resource, Api
 from flask_cors import CORS, cross_origin
 from json import dumps
 from flask.ext.jsonpify import jsonify
-elmain = __import__('main')
+decisionmaker = __import__('decisionmaker')
 
 app = Flask(__name__)
 api = Api(app)
+
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+FirstCall = True
 
 class Room_Emotion(Resource):
-    def get(self, current_genre):
-        #run something
+	def get(self, current_genre):
+		#run something
         #print(current_genre)
-        next_genre = elmain.run_program()
-        return jsonify(next_genre)
+        #Call getDecisionForSongChange to with 'features' to get age,gender of room
+        #Call getDecisionForSongChange to with anything else to get decision to change song
+		global FirstCall
+		if FirstCall:
+			decision = decisionmaker.getDecisionForSongChange('features')
+		else:
+			decision = decisionmaker.getDecisionForSongChange()
+		FirstCall = False
+        #print(decision)
+		return jsonify(decision)
+        
 
-api.add_resource(Room_Emotion, '/api/genre/next/<current_genre>') # Route_3
+api.add_resource(Room_Emotion, '/api/genre/next/<current_genre>') #Route_3
 
 if __name__ == '__main__':
      app.run(port='5002')
