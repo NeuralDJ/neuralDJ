@@ -1,4 +1,4 @@
 webcamtoemotion = __import__('webcamtoemotion')
-fps = 5
-emotionFeatures = webcamtoemotion.GetEmotionFromCameraFeed(fps)
+numofframes = 5
+emotionFeatures = webcamtoemotion.GetEmotionFromCameraFeed(numofframes)
 print(emotionFeatures)
