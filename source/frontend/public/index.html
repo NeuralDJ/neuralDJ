@@ -68,7 +68,7 @@
 							
 								<input id="pauseBtn" type="button" value="PAUSE" />
 							
-								<input id="nextBtn" type="button" value="NEXT" />
+								<!--<input id="nextBtn" type="button" value="NEXT" />-->
 							
 								<input id="analyzeRoomBtn" type="button" value="ANALYZE ROOM" />
 								<input id="analyzeAudienceBtn" type="button" value="ANALYZE EMOTIONS" />
@@ -78,12 +78,13 @@
 							<br />
 						
 							<div> 
-							
+								<p>Current mood: <span id="cMood">None</span></p>
 								<p>Title: <span id="cTitle"></span></p>
 							
 								<p>Artist: <span id="cArtist"></span></p>
 							
 								<p>Album: <span id="cAlbum"></span></p>
+
 							
 								<!--<p>Genre: <span id="cGenre"></span></p>-->
 							
@@ -98,40 +99,46 @@
 							</div>
 						</div>
 
-						<div id="app_data_container" class="appDataContainer" style="display: none;">
+						<div id="app_data_container" class="appDataContainer">
 							<div id="container_room" class="dataContainer">
-								<div id="loading" class="dataContent 6u">
+								<div id="loading" class="dataContent" style="display:none">
 										<div id="picture" class="dataPicture">
-												show loading image here
+												Room Data
 										</div>
 										<div id="info" class="dataInfo">
-											show loading text here
-										</div>
-								</div>
-								<div id="content" class="dataContent 6us">
-										<div id="picture" class="dataPicture">
-											show room image (any big icon that represents a room)
-										</div>
-										<div id="info" class="dataInfo">
-												show data content retrieved from backend
-										</div>
-								</div>
-							</div>
-							<div id="container_emotion" class="dataContainer">
-								<div id="loading" class="dataContent">
-										<div id="picture" class="dataPicture">
-												show loading image here
-										</div>
-										<div id="info" class="dataInfo">
-											show loading text here
+												Analyzing Room...
 										</div>
 								</div>
 								<div id="content" class="dataContent">
 										<div id="picture" class="dataPicture">
-											show room image (any big icon that represents a room)
+											ROOM SETTING
 										</div>
 										<div id="info" class="dataInfo">
-												show data content retrieved from backend
+											<div id="age">Age: <span>---</span></div>
+											<div id="gender">Gender: <span>---</span></div>
+											<div id="scene">Scene: <span>---</span></div>
+										</div>
+								</div>
+							</div>
+
+								<br />
+							<div id="container_emotion" class="dataContainer">
+								<div id="loading" class="dataContent" style="display:none">
+										<div id="picture" class="dataPicture">
+												Room Emotions
+										</div>
+										<div id="info" class="dataInfo">
+											Analyzing Emotions...
+										</div>
+								</div>
+								<div id="content" class="dataContent">
+										<div id="picture" class="dataPicture">
+											ROOM EMOTION DATA
+										</div>
+										<div id="info" class="dataInfo">
+											<div id="emotion">Emotion: <span>---</span></div>
+											<div id="changeSong">ChangeSong: <span>---</span></div>
+										</div>
 										</div>
 								</div>
 							</div>

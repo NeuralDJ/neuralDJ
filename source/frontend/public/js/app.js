@@ -82,21 +82,40 @@ $( document ).ready(function() {
       dj.pause();
     });
 
-    $('#nextBtn').click(function() {
-      //console.log('next song');
-      dj.skipSong();
-    });
+    //$('#nextBtn').click(function() {
+    //  //console.log('next song');
+    //  dj.skipSong();
+    //});
 
     $('#analyzeRoomBtn').click(function() {
-      console.log('BOOOM 1');
       dj.setRoomSettings();
+
+    //  setTimeout(function() {
+    //       if($('#cMood').text() == 'HAPPY')
+    //       {
+    //         dj.skipSong();
+    //         $('#cMood').text('SAD');
+    //       }
+    //       else {
+    //         $('#cMood').text('HAPPY');
+    //       }
+    //     }, 3000);
     });
 
     $('#analyzeAudienceBtn').click(function() {
-      console.log('BOOOOOOOOOM');
       dj.setEmotions();
+
+    // setTimeout(function() {
+    //       dj.skipSong();
+    //       if($('#cMood').text() == 'HAPPY')
+    //       {
+    //         $('#cMood').text('SAD');
+    //       }
+    //       else {
+    //         $('#cMood').text('HAPPY');
+    //       }
+    //     }, 3000);      
     });
-    //
 
     $('#updateSong').click(function() {
       //console.log('getting current song');
