@@ -26,7 +26,7 @@ class Room_Emotion(Resource):
 		else:
 			decision = decisionmaker.getDecisionForSongChange()
 		FirstCall = False
-        #print(decision)
+		print(decision)
 		return jsonify(decision)
         
 
