@@ -29,15 +29,22 @@ var DeeJay = (function(_access_token) {
         });
       }
 
-      self.changeGenre = function(current_genre)
+      self.changeGenre = function(request_type, current_genre)
       {
         if(current_genre === undefined || current_genre === null)
         {
             current_genre = 'none';
         }
 
+        if(request_type === undefined || request_type === null)
+        {
+            //features
+            //emotion
+            request_type = 'emotion';
+        }
+
         return $.ajax({
-          url: 'http://127.0.0.1:5002/api/genre/next/' + current_genre
+          url: 'http://127.0.0.1:5002/api/genre/next/' + request_type + '/' + current_genre
         }).done(function(data) {
             //console.log(data);
             self.skipSong();
