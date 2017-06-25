@@ -3,14 +3,16 @@
 
 from flask import Flask, request
 from flask_restful import Resource, Api
+from flask_cors import CORS, cross_origin
 from json import dumps
 from flask.ext.jsonpify import jsonify
 decisionmaker = __import__('decisionmaker')
 
 app = Flask(__name__)
 api = Api(app)
-FirstCall = True
 
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+FirstCall = True
 
 class Room_Emotion(Resource):
 	def get(self, current_genre):
