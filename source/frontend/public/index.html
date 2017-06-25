@@ -15,6 +15,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/spotifyHelper.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -53,7 +54,16 @@
         <div id="user-profile">
         	</div>
         <div id="oauth">
-        	</div>
+        </div>
+				<div id="track">
+
+					<div>
+						<input id="updateSong" type="button" value="Update Current Song" />
+					</div>
+					<div> 
+						Current Song: <span id="csong">NOTHING</span>
+					</div>
+				</div>
       </div>
     </div>
 
@@ -195,7 +205,6 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
       (function() {
-
         /**
          * Obtains parameters from the hash of the URL
          * @return Object
@@ -251,21 +260,6 @@
               $('#login').show();
               $('#loggedin').hide();
           }
-
-          document.getElementById('obtain-new-token').addEventListener('click', function() {
-            $.ajax({
-              url: '/refresh_token',
-              data: {
-                'refresh_token': refresh_token
-              }
-            }).done(function(data) {
-              access_token = data.access_token;
-              oauthPlaceholder.innerHTML = oauthTemplate({
-                access_token: access_token,
-                refresh_token: refresh_token
-              });
-            });
-          }, false);
         }
       })();
     </script>
