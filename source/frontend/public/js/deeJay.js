@@ -6,9 +6,9 @@ var DeeJay = (function(_access_token) {
 
       self.spotify.setAccessToken(self.access_token);
 
-      console.log('get my devices now maaan -- ' + _access_token);
+      //console.log('get my devices now maaan -- ' + _access_token);
       self.spotify.getMyDevices().then(function(data) {
-        console.log('getmydevice - success');
+        //console.log('getmydevice - success');
         self.device_id = data.devices[0].id;
       });
 
@@ -39,7 +39,7 @@ var DeeJay = (function(_access_token) {
         return $.ajax({
           url: 'http://127.0.0.1:5002/api/genre/next/' + current_genre
         }).done(function(data) {
-            console.log(data);
+            //console.log(data);
             self.skipSong();
         });
       }
@@ -52,10 +52,10 @@ var DeeJay = (function(_access_token) {
           }
 
           setTimeout(function() {
-            console.log('lets change songs!');
+            //console.log('lets change songs!');
             var callback = self.spotify.getMyCurrentPlaybackState();
             callback.then(function(data) {
-                console.log(data.item.artists);
+                //console.log(data.item.artists);
                 $('#cTitle').text(data.item.name);
                 $('#cArtist').text(data.item.artists[0].name);
                 $('#cAlbum').text(data.item.album.name);
@@ -70,20 +70,3 @@ var DeeJay = (function(_access_token) {
     
       return self;
   });
-
-$( document ).ready(function() {
-
-    function getNextGenre()
-    {
-        var url_getNext = 'http://127.0.0.1:5002/api/genre/next/current_genre_is_rock';
-        return makeCall(url_getNext);
-    }
-
-    function makeCall(url, data)
-    {
-        return $.ajax({
-          url: url,
-          data: data
-        })
-    }
-});

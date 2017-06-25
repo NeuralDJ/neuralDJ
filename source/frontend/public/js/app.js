@@ -73,51 +73,29 @@ $( document ).ready(function() {
     dj.setCurrentTrack();
 
     $('#playBtn').click(function() {
-      console.log('play song');
+      //console.log('play song');
       dj.play();
     });
   
     $('#pauseBtn').click(function() {
-      console.log('play song');
+      //console.log('play song');
       dj.pause();
     });
 
     $('#nextBtn').click(function() {
-      console.log('next song');
+      //console.log('next song');
       dj.skipSong();
     });
 
     $('#analyzeRoomBtn').click(function() {
-      console.log('analyze room');
+      //console.log('analyze room');
       dj.changeGenre();
     });
 
     $('#updateSong').click(function() {
-      console.log('getting current song');
+      //console.log('getting current song');
       dj.setCurrentTrack();
-    })
-
-    // var device_id = undefined;
-
-    // // https://jmperezperez.com/spotify-web-api-js/
-    // var spotifyApi = new SpotifyWebApi();
-    // spotifyApi.setAccessToken(access_token);
-    //  //spotifyApi.pause(null, callbackTest);
-    // console.log('get my device');
-    // spotifyApi.getMyDevices().then(function(data) {
-    //   console.log('getmydevice - success');
-    //   device_id = data.devices[0].id;
-
-    //   var options = {
-    //     device_id: device_id,
-    //   };
-    //   //spotifyApi.play(options).then(function(data) {
-    //   //  console.log('pause returned')
-    //   //});
-    // }, function(err) {
-    //   console.log('getmydevice - false');
-    //   console.error(err);
-    // });
+    });
   }
 
   init();
