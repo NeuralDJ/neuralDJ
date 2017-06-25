@@ -22,7 +22,7 @@ def getFeaturesforMusic(FramesList):
 	EmotionFeatures['age'] = 27
 	EmotionFeatures['gender'] = 'male'
 	EmotionFeatures['smile'] = 'yes'
-	EmotionFeatures['emotion'] = 'HAPPY'
+	EmotionFeatures['emotion'] = 'SAD'
 
 	if age:
 		try:
