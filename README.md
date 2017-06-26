@@ -34,7 +34,8 @@ To just scope down. Here are the areas I am more confortable with:
 ### Vikas
 
 I worked on the entire backend folder and I can exactly pinpoint help in any of the files - 
-analytics.py,app_server.py,azurevision.py,decisionmaker.py,emotion.py,getCameraFeedProto.py,webcamtoemotion.py
+analytics.py,app_server.py,azurevision.py,decisionmaker.py,emotion.py,
+getCameraFeedProto.py,webcamtoemotion.py,feed.py
 
 
 
