@@ -30,3 +30,12 @@ To just scope down. Here are the areas I am more confortable with:
 1. Spotify web api calls (oauth to some level)
 1. Any of the javascript files under the frontend/public/js folder
 1. app_server.py, feed.py, emotion.py
+
+### Vikas
+
+I worked on the entire backend folder and I can exactly pinpoint help in any of the files - 
+analytics.py,app_server.py,azurevision.py,decisionmaker.py,emotion.py,getCameraFeedProto.py,webcamtoemotion.py
+
+
+
+
