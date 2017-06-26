@@ -4,7 +4,7 @@ import sys
 import urllib
 
 def detect_visionFeature(img):
-    subscription_key = 'b374d9b47f2f4b25900b5b68a976a3b2'
+    subscription_key = 'subscription_key'
     api_url = 'https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze'
 
     headers = {
