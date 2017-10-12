@@ -36,6 +36,16 @@ To just scope down. Here are the areas I am more confortable with:
 I worked on the entire backend folder and I can exactly pinpoint help in any of the files - 
 analytics.py,app_server.py,azurevision.py,decisionmaker.py,emotion.py,webcamtoemotion.py,feed.py
 
+### Luyanda 
+I worked as lead on the front-end as well as the research cloud computing tools to meet our requirements.  
+1. Spotify web api calls (main Lead)
+2. Entire frontend development (UI, UX and front-end development)
+3. Video access and processing
+4. Reading documentation on cloud computing platforms to find best solution
+
+
+
+
 
 
 
